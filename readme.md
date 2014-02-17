@@ -2,6 +2,8 @@
 
 > Prefix CSS using [Autoprefixer](https://github.com/ai/autoprefixer)
 
+*Issues with the output should be reported on the Autoprefixer [issue tracker](https://github.com/ai/autoprefixer/issues).*
+
 
 ## Install
 
