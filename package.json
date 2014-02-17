@@ -1,0 +1,37 @@
+{
+  "name": "broccoli-autoprefixer",
+  "version": "0.0.0",
+  "description": "Prefix CSS using Autoprefixer",
+  "license": "MIT",
+  "repository": "sindresorhus/broccoli-autoprefixer",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "broccoli build temp && mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "broccoli-plugin",
+    "autoprefixer",
+    "css",
+    "prefix",
+    "preprocess"
+  ],
+  "dependencies": {
+    "broccoli-filter": "0.0.1",
+    "autoprefixer": "~1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "broccoli": "~0.1.1",
+    "rimraf": "~2.2.6"
+  }
+}
