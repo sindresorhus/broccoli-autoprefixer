@@ -1,4 +1,4 @@
-# [broccoli](https://github.com/joliss/broccoli)-autoprefixer [![Build Status](https://travis-ci.org/sindresorhus/broccoli-autoprefixer.png?branch=master)](https://travis-ci.org/sindresorhus/broccoli-autoprefixer)
+# [broccoli](https://github.com/joliss/broccoli)-autoprefixer [![Build Status](https://travis-ci.org/sindresorhus/broccoli-autoprefixer.svg?branch=master)](https://travis-ci.org/sindresorhus/broccoli-autoprefixer)
 
 > Prefix CSS using [Autoprefixer](https://github.com/ai/autoprefixer)
 
@@ -7,12 +7,12 @@
 
 ## Install
 
-```
-npm install --save broccoli-autoprefixer
+```bash
+$ npm install --save broccoli-autoprefixer
 ```
 
 
-## Example
+## Usage
 
 ```js
 var autoprefixer = require('broccoli-autoprefixer');
@@ -36,4 +36,4 @@ The [browsers](https://github.com/ai/autoprefixer#browsers) you need to support.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
