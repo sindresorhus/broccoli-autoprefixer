@@ -34,7 +34,7 @@ AutoprefixerFilter.prototype.processString = function (str) {
 		options.map = true;
 	}
 
-	var css = autoprefixer.apply(autoprefixer, options).process(str);
+	var css = autoprefixer.process(str, options);
 	var output = css.css;
 
 	if (enableSimpleSourcemaps || enablePassthroughSourcemaps) {
