@@ -18,7 +18,30 @@ AutoprefixerFilter.prototype.extensions = ['css'];
 AutoprefixerFilter.prototype.targetExtension = 'css';
 
 AutoprefixerFilter.prototype.processString = function (str) {
-	return autoprefixer.apply(autoprefixer, this.options.browsers).process(str).css;
+	var enablePassthroughSourcemaps = typeof this.options.sourcemap == 'object';
+	var enableSimpleSourcemaps = this.options.sourcemap && typeof this.options.sourcemap == 'boolean'
+
+	var options = {
+		browsers: this.options.browsers
+	};
+
+	if (enablePassthroughSourcemaps) {
+		options.map = this.options.sourcemap.map || undefined;
+		options.from = this.options.sourcemap.from || undefined;
+		options.to = this.options.sourcemap.to || undefined;
+	}
+	else if (enableSimpleSourcemaps) {
+		options.map = true;
+	}
+
+	var css = autoprefixer.process(str, options);
+	var output = css.css;
+
+	if (enableSimpleSourcemaps || enablePassthroughSourcemaps) {
+		output += '\n/*# sourceMappingURL=data:application/json;base64,' + new Buffer(css.map).toString('base64') + ' */';
+	}
+
+	return output;
 };
 
 module.exports = AutoprefixerFilter;

@@ -28,10 +28,22 @@ tree = autoprefixer(tree, options);
 
 ##### browsers
 
-Type: `Array`  
+Type: `Array`
 Default: `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`
 
 The [browsers](https://github.com/ai/autoprefixer#browsers) you need to support.
+
+##### sourcemap
+
+Type: `Boolean` OR `Object`
+Default: `false`
+
+To simply turn on sourcemaps, set this to `true`. They will be data-uri'd at the bottom.
+
+If you're starting with a sourcemap, pass an object here. This object contains one or more of
+the following: `{ map: 'the old map', from: 'oldfile.css', to: 'newfile.css' }`.
+
+Full docs on what autoprefixer wants here are [here](https://github.com/ai/postcss#source-map-1).
 
 
 ## License
