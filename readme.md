@@ -30,11 +30,21 @@ See the Autoprefixer [options](https://github.com/ai/autoprefixer#visual-cascade
 
 ##### browsers
 
-Type: `Array`  
+Type: `Array`
 Default: `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`
 
 The [browsers](https://github.com/ai/autoprefixer#browsers) you need to support.
 
+#### sourcemap
+
+Type: `Boolean`
+Default: `true` if the input has a sourcemap, otherwise `false`
+
+Set to `true` to include a base64-encoded sourcemap at the end of the output.
+
+If a sourcemap already exists in the input, Autoprefixer will automatically
+include an updated sourcemap in the output. Set this value to `false` to
+strip out the sourcemap entirely.
 
 ## License
 
