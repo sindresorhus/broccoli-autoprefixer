@@ -18,7 +18,7 @@ AutoprefixerFilter.prototype.extensions = ['css'];
 AutoprefixerFilter.prototype.targetExtension = 'css';
 
 AutoprefixerFilter.prototype.processString = function (str) {
-	return autoprefixer.apply(autoprefixer, this.options.browsers).process(str).css;
+	return autoprefixer.apply(autoprefixer, this.options.browsers).process(str, this.options).css;
 };
 
 module.exports = AutoprefixerFilter;

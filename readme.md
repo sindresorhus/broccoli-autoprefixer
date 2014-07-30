@@ -26,6 +26,8 @@ tree = autoprefixer(tree, options);
 
 #### options
 
+See the Autoprefixer [options](https://github.com/ai/autoprefixer#visual-cascade).
+
 ##### browsers
 
 Type: `Array`  

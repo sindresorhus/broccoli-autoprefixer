@@ -26,12 +26,13 @@
     "preprocess"
   ],
   "dependencies": {
-    "autoprefixer": "^1.1.2",
+    "autoprefixer": "^2.2.0",
     "broccoli-filter": "^0.1.6"
   },
   "devDependencies": {
-    "broccoli": "^0.7.2",
+    "broccoli": "^0.12.3",
+    "broccoli-cli": "0.0.1",
     "mocha": "*",
-    "rimraf": "~2.2.6"
+    "rimraf": "^2.2.6"
   }
 }
