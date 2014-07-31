@@ -19,21 +19,13 @@ AutoprefixerFilter.prototype.extensions = ['css'];
 AutoprefixerFilter.prototype.targetExtension = 'css';
 
 AutoprefixerFilter.prototype.processString = function (str, relativePath) {
-	// Options required for pass-through inline sourcemaps
-	var options = {
+	var opts = objectAssign({}, this.options, {
+		map: this.options.sourcemap ? 'inline' : false,
 		from: relativePath,
 		to: relativePath
-	}
+	});
 
-	// Support explicit override of inline sourcemaps
-	if (this.options.sourcemap != null) {
-		options.map = this.options.sourcemap ? 'inline' : false;
-	}
-
-	// Copy remaining options
-	objectAssign(options, this.options);
-
-	return autoprefixer.apply(autoprefixer, this.options.browsers).process(str, options).css;
+	return autoprefixer(opts.browsers).process(str, opts).css;
 };
 
 module.exports = AutoprefixerFilter;

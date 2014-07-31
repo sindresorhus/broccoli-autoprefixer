@@ -1,2 +1,2 @@
 'use strict';
-module.exports = require('./')('fixture');
+module.exports = require('./')('fixture', {sourcemap: true});
