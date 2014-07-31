@@ -46,6 +46,9 @@ If a sourcemap already exists in the input, Autoprefixer will automatically
 include an updated sourcemap in the output. Set this value to `false` to
 strip out the sourcemap entirely.
 
+If you'd like to extract the inline sourcemap from the output, consider using a
+tool like [broccoli-source-map](https://github.com/myfreeweb/broccoli-source-map).
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
