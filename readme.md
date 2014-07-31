@@ -30,7 +30,7 @@ See the Autoprefixer [options](https://github.com/ai/autoprefixer#visual-cascade
 
 ##### browsers
 
-Type: `Array`
+Type: `Array`  
 Default: `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`
 
 The [browsers](https://github.com/ai/autoprefixer#browsers) you need to support.

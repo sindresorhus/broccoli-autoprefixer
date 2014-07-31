@@ -1,6 +1,7 @@
 'use strict';
 var Filter = require('broccoli-filter');
 var autoprefixer = require('autoprefixer');
+var objectAssign = require('object-assign');
 
 function AutoprefixerFilter(inputTree, options) {
 	if (!(this instanceof AutoprefixerFilter)) {
@@ -30,9 +31,7 @@ AutoprefixerFilter.prototype.processString = function (str, relativePath) {
 	}
 
 	// Copy remaining options
-	for (var key in this.options) {
-		options[key] = this.options[key];
-	}
+	objectAssign(options, this.options);
 
 	return autoprefixer.apply(autoprefixer, this.options.browsers).process(str, options).css;
 };
