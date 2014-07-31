@@ -37,7 +37,7 @@ The [browsers](https://github.com/ai/autoprefixer#browsers) you need to support.
 
 #### sourcemap
 
-Type: `Boolean`
+Type: `Boolean`  
 Default: `true` if the input has a sourcemap, otherwise `false`
 
 Set to `true` to include a base64-encoded sourcemap at the end of the output.
