@@ -7,7 +7,7 @@
 
 ## Install
 
-```bash
+```sh
 $ npm install --save broccoli-autoprefixer
 ```
 
@@ -30,14 +30,14 @@ See the Autoprefixer [options](https://github.com/ai/autoprefixer#visual-cascade
 
 ##### browsers
 
-Type: `Array`  
+Type: `array`  
 Default: `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`
 
 The [browsers](https://github.com/ai/autoprefixer#browsers) you need to support.
 
-#### sourcemap
+##### sourcemap
 
-Type: `Boolean`  
+Type: `boolean`  
 Default: `true` if the input has a sourcemap, otherwise `false`
 
 Set to `true` to include a base64-encoded sourcemap at the end of the output.
@@ -48,6 +48,7 @@ strip out the sourcemap entirely.
 
 If you'd like to extract the inline sourcemap from the output, consider using a
 tool like [broccoli-source-map](https://github.com/myfreeweb/broccoli-source-map).
+
 
 ## License
 
