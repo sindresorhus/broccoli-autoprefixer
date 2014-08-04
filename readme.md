@@ -26,8 +26,6 @@ tree = autoprefixer(tree, options);
 
 #### options
 
-See the Autoprefixer [options](https://github.com/ai/autoprefixer#visual-cascade).
-
 ##### browsers
 
 Type: `array`  
@@ -48,6 +46,13 @@ strip out the sourcemap entirely.
 
 If you'd like to extract the inline sourcemap from the output, consider using a
 tool like [broccoli-source-map](https://github.com/myfreeweb/broccoli-source-map).
+
+##### cascade
+
+Type: `boolean`  
+Default: `true`
+
+Autoprefixer changes CSS indentation to create a nice [visual cascade](https://github.com/ai/autoprefixer#visual-cascade) of prefixes.
 
 
 ## License

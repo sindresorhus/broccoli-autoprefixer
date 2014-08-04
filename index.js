@@ -29,7 +29,7 @@ AutoprefixerFilter.prototype.processString = function (str, relativePath) {
 		opts.map = opts.sourcemap ? 'inline' : false;
 	}
 
-	return autoprefixer(opts.browsers).process(str, opts).css;
+	return autoprefixer(opts.browsers, opts).process(str, opts).css;
 };
 
 module.exports = AutoprefixerFilter;

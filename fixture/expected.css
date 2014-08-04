@@ -1,6 +1,6 @@
 :-webkit-full-screen a {
 	-webkit-transition: -webkit-transform 1s;
-	        transition: transform 1s
+	transition: transform 1s
 }
 :-moz-full-screen a {
 	transition: transform 1s
@@ -10,7 +10,7 @@
 }
 :fullscreen a {
 	-webkit-transition: -webkit-transform 1s;
-	        transition: transform 1s
+	transition: transform 1s
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpeHR1cmUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0NBQ0MsMENBQXdCO1NBQXhCLHlCQUF3QjtFQUN4QjtBQUZEO0NBQ0MseUJBQXdCO0VBQ3hCO0FBRkQ7Q0FDQyx5QkFBd0I7RUFDeEI7QUFGRDtDQUNDLDBDQUF3QjtTQUF4Qix5QkFBd0I7RUFDeEIiLCJmaWxlIjoiZml4dHVyZS5jc3MifQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZpeHR1cmUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0NBQ0MsMENBQXdCO0NBQXhCLHlCQUF3QjtFQUN4QjtBQUZEO0NBQ0MseUJBQXdCO0VBQ3hCO0FBRkQ7Q0FDQyx5QkFBd0I7RUFDeEI7QUFGRDtDQUNDLDBDQUF3QjtDQUF4Qix5QkFBd0I7RUFDeEIiLCJmaWxlIjoiZml4dHVyZS5jc3MifQ== */
