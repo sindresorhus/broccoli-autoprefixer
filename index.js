@@ -1,6 +1,6 @@
 'use strict';
 var Filter = require('broccoli-filter');
-var autoprefixer = require('autoprefixer');
+var autoprefixer = require('autoprefixer-core');
 var objectAssign = require('object-assign');
 
 function AutoprefixerFilter(inputTree, options) {
@@ -29,7 +29,7 @@ AutoprefixerFilter.prototype.processString = function (str, relativePath) {
 		opts.map = opts.sourcemap ? 'inline' : false;
 	}
 
-	return autoprefixer(opts.browsers, opts).process(str, opts).css;
+	return autoprefixer(opts).process(str, opts).css;
 };
 
 module.exports = AutoprefixerFilter;
