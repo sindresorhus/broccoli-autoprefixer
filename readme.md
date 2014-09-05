@@ -57,4 +57,4 @@ Autoprefixer changes CSS indentation to create a nice [visual cascade](https://g
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)
