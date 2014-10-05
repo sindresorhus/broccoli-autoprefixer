@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "autoprefixer-core": "^3.0.0",
-    "broccoli-filter": "^0.1.6",
+    "broccoli-filter": "^0.1.7",
     "object-assign": "^1.0.0"
   },
   "devDependencies": {
