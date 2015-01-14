@@ -1,6 +1,6 @@
 {
   "name": "broccoli-autoprefixer",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Prefix CSS using Autoprefixer",
   "license": "MIT",
   "repository": "sindresorhus/broccoli-autoprefixer",
