@@ -7,8 +7,8 @@
 
 ## Install
 
-```sh
-$ npm install --save broccoli-autoprefixer
+```
+$ npm install --save-dev broccoli-autoprefixer
 ```
 
 
@@ -22,7 +22,7 @@ tree = autoprefixer(tree, options);
 
 ## API
 
-### autoprefixer(tree, options)
+### autoprefixer(tree, [options])
 
 #### options
 
