@@ -1,7 +1,8 @@
 'use strict';
 var Filter = require('broccoli-filter');
-var autoprefixer = require('autoprefixer-core');
 var objectAssign = require('object-assign');
+var autoprefixer = require('autoprefixer-core');
+var postcss = require('postcss');
 
 function AutoprefixerFilter(inputTree, options) {
 	if (!(this instanceof AutoprefixerFilter)) {
@@ -29,7 +30,25 @@ AutoprefixerFilter.prototype.processString = function (str, relativePath) {
 		opts.map = opts.sourcemap ? 'inline' : false;
 	}
 
-	return autoprefixer(opts).process(str, opts).css;
+	return postcss(autoprefixer(opts))
+		.process(str, opts)
+		.then(function (res) {
+			var warnings = res.warnings();
+
+			if (warnings.length > 0) {
+				console.error(warnings.join('\n'));
+			}
+
+			return res.css;
+		})
+		.catch(function (err) {
+			if (err.name === 'CssSyntaxError') {
+				// TODO: find a way to hide the stack so to adhere to the PostCSS guidelines
+				err.message += err.showSourceCode();
+			}
+
+			throw err;
+		});
 };
 
 module.exports = AutoprefixerFilter;

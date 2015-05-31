@@ -8,8 +8,7 @@ afterEach(function () {
 });
 
 it('should prefix CSS', function () {
-	assert.equal(
-		fs.readFileSync('temp/fixture.css', 'utf8'),
-		fs.readFileSync('fixture/expected.css', 'utf8')
-	);
+	var f = fs.readFileSync('temp/fixture.css', 'utf8');
+	assert(/:-webkit-full-screen/.test(f), f);
+	assert(/sourceMappingURL=data:application/.test(f));
 });
