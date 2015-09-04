@@ -1,8 +1,8 @@
 # [broccoli](https://github.com/joliss/broccoli)-autoprefixer [![Build Status](https://travis-ci.org/sindresorhus/broccoli-autoprefixer.svg?branch=master)](https://travis-ci.org/sindresorhus/broccoli-autoprefixer)
 
-> Prefix CSS using [Autoprefixer](https://github.com/ai/autoprefixer)
+> Prefix CSS using [Autoprefixer](https://github.com/postcss/autoprefixer)
 
-*Issues with the output should be reported on the Autoprefixer [issue tracker](https://github.com/ai/autoprefixer/issues).*
+*Issues with the output should be reported on the Autoprefixer [issue tracker](https://github.com/postcss/autoprefixer/issues).*
 
 
 ## Install
@@ -26,12 +26,9 @@ tree = autoprefixer(tree, options);
 
 #### options
 
-##### browsers
+See the Autoprefixer [options](https://github.com/postcss/autoprefixer#options).
 
-Type: `array`  
-Default: `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`
-
-The [browsers](https://github.com/ai/autoprefixer#browsers) you need to support.
+In addition, you can set this option:
 
 ##### sourcemap
 
@@ -46,13 +43,6 @@ strip out the sourcemap entirely.
 
 If you'd like to extract the inline sourcemap from the output, consider using a
 tool like [broccoli-source-map](https://github.com/myfreeweb/broccoli-source-map).
-
-##### cascade
-
-Type: `boolean`  
-Default: `true`
-
-Autoprefixer changes CSS indentation to create a nice [visual cascade](https://github.com/ai/autoprefixer#visual-cascade) of prefixes.
 
 
 ## License

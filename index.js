@@ -1,13 +1,15 @@
 'use strict';
 var Filter = require('broccoli-filter');
 var objectAssign = require('object-assign');
-var autoprefixer = require('autoprefixer-core');
 var postcss = require('postcss');
+var autoprefixer = require('autoprefixer');
 
 function AutoprefixerFilter(inputTree, options) {
 	if (!(this instanceof AutoprefixerFilter)) {
 		return new AutoprefixerFilter(inputTree, options);
 	}
+
+	Filter.call(this, inputTree);
 
 	this.inputTree = inputTree;
 	this.options = options || {};
@@ -32,14 +34,14 @@ AutoprefixerFilter.prototype.processString = function (str, relativePath) {
 
 	return postcss(autoprefixer(opts))
 		.process(str, opts)
-		.then(function (res) {
-			var warnings = res.warnings();
+		.then(function (result) {
+			var warnings = result.warnings();
 
 			if (warnings.length > 0) {
 				console.error(warnings.join('\n'));
 			}
 
-			return res.css;
+			return result.css;
 		})
 		.catch(function (err) {
 			if (err.name === 'CssSyntaxError') {
