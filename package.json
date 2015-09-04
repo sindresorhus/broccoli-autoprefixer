@@ -13,7 +13,7 @@
     "node": ">=0.12.0"
   },
   "scripts": {
-    "test": "broccoli build temp && mocha"
+    "test": "xo && broccoli build temp && mocha"
   },
   "files": [
     "index.js"
@@ -39,6 +39,7 @@
     "broccoli": "^0.16.3",
     "broccoli-cli": "^1.0.0",
     "mocha": "*",
-    "rimraf": "^2.2.6"
+    "rimraf": "^2.2.6",
+    "xo": "*"
   }
 }

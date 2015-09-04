@@ -28,7 +28,7 @@ AutoprefixerFilter.prototype.processString = function (str, relativePath) {
 	}, this.options);
 
 	// support explicit override of inline sourcemaps
-	if (opts.sourcemap != null) {
+	if (opts.sourcemap !== null || opts.sourcemap !== undefined) {
 		opts.map = opts.sourcemap ? 'inline' : false;
 	}
 
