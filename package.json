@@ -31,7 +31,8 @@
   ],
   "dependencies": {
     "autoprefixer": "^6.0.0",
-    "broccoli-filter": "^1.2.2",
+    "broccoli-persistent-filter": "^1.1.0",
+    "json-stable-stringify": "^1.0.0",
     "object-assign": "^4.0.1",
     "postcss": "^5.0.4"
   },
