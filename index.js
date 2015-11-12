@@ -1,18 +1,19 @@
 'use strict';
-var Filter = require('broccoli-filter');
+var Filter = require('broccoli-persistent-filter');
 var objectAssign = require('object-assign');
 var postcss = require('postcss');
 var autoprefixer = require('autoprefixer');
 
-function AutoprefixerFilter(inputTree, options) {
+function AutoprefixerFilter(inputTree, _options) {
+	var options = _options || {};
 	if (!(this instanceof AutoprefixerFilter)) {
-		return new AutoprefixerFilter(inputTree, options);
+		return new AutoprefixerFilter(inputTree, _options);
 	}
 
-	Filter.call(this, inputTree);
+	Filter.call(this, inputTree, options);
 
 	this.inputTree = inputTree;
-	this.options = options || {};
+	this.options = options;
 }
 
 AutoprefixerFilter.prototype = Object.create(Filter.prototype);
