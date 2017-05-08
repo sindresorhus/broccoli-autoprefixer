@@ -1,11 +1,11 @@
 'use strict';
-var Filter = require('broccoli-persistent-filter');
-var objectAssign = require('object-assign');
-var postcss = require('postcss');
-var autoprefixer = require('autoprefixer');
+const Filter = require('broccoli-persistent-filter');
+const postcss = require('postcss');
+const autoprefixer = require('autoprefixer');
 
 function AutoprefixerFilter(inputTree, _options) {
-	var options = _options || {};
+	const options = _options || {};
+
 	if (!(this instanceof AutoprefixerFilter)) {
 		return new AutoprefixerFilter(inputTree, _options);
 	}
@@ -23,20 +23,20 @@ AutoprefixerFilter.prototype.extensions = ['css'];
 AutoprefixerFilter.prototype.targetExtension = 'css';
 
 AutoprefixerFilter.prototype.processString = function (str, relativePath) {
-	var opts = objectAssign({
+	const opts = Object.assign({
 		from: relativePath,
 		to: relativePath
 	}, this.options);
 
-	// support explicit override of inline sourcemaps
+	// Support explicit override of inline sourcemaps
 	if (opts.sourcemap !== null || opts.sourcemap !== undefined) {
 		opts.map = opts.sourcemap ? 'inline' : false;
 	}
 
 	return postcss(autoprefixer(opts))
 		.process(str, opts)
-		.then(function (result) {
-			var warnings = result.warnings();
+		.then(result => {
+			const warnings = result.warnings();
 
 			if (warnings.length > 0) {
 				console.error(warnings.join('\n'));
@@ -44,9 +44,9 @@ AutoprefixerFilter.prototype.processString = function (str, relativePath) {
 
 			return result.css;
 		})
-		.catch(function (err) {
+		.catch(err => {
 			if (err.name === 'CssSyntaxError') {
-				// TODO: find a way to hide the stack so to adhere to the PostCSS guidelines
+				// TODO: Find a way to hide the stack so to adhere to the PostCSS guidelines
 				err.message += err.showSourceCode();
 			}
 

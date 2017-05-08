@@ -10,10 +10,10 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4"
   },
   "scripts": {
-    "test": "xo && broccoli build temp && mocha"
+    "test": "xo && broccoli build temp && ava"
   },
   "files": [
     "index.js"
@@ -32,14 +32,13 @@
   "dependencies": {
     "autoprefixer": "^7.0.0",
     "broccoli-persistent-filter": "^1.1.6",
-    "object-assign": "^4.0.1",
     "postcss": "^6.0.1"
   },
   "devDependencies": {
+    "ava": "*",
     "broccoli": "^1.1.1",
     "broccoli-cli": "^1.0.0",
-    "mocha": "*",
-    "rimraf": "^2.2.6",
+    "del": "^2.2.2",
     "xo": "*"
   }
 }
