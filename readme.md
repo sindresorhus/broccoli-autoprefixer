@@ -15,14 +15,14 @@ $ npm install --save-dev broccoli-autoprefixer
 ## Usage
 
 ```js
-const autoprefixer = require('broccoli-autoprefixer');
-tree = autoprefixer(tree, options);
+const Autoprefixer = require('broccoli-autoprefixer');
+tree = new Autoprefixer(tree, options);
 ```
 
 
 ## API
 
-### autoprefixer(tree, [options])
+### Autoprefixer(tree, [options])
 
 #### options
 

@@ -1,2 +1,4 @@
 'use strict';
-module.exports = require('.')('fixture', {sourcemap: true, cascade: false});
+const Autoprefixer = require('.');
+
+module.exports = new Autoprefixer('fixture', {sourcemap: true, cascade: false});

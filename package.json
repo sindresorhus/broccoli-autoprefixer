@@ -1,44 +1,44 @@
 {
-  "name": "broccoli-autoprefixer",
-  "version": "5.0.0",
-  "description": "Prefix CSS using Autoprefixer",
-  "license": "MIT",
-  "repository": "sindresorhus/broccoli-autoprefixer",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && broccoli build temp && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "broccoli-plugin",
-    "autoprefixer",
-    "postcss",
-    "css",
-    "prefix",
-    "prefixes",
-    "stylesheet",
-    "preprocess",
-    "postcss-runner"
-  ],
-  "dependencies": {
-    "autoprefixer": "^7.0.0",
-    "broccoli-persistent-filter": "^1.1.6",
-    "postcss": "^6.0.1"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "broccoli": "^1.1.1",
-    "broccoli-cli": "^1.0.0",
-    "del": "^2.2.2",
-    "xo": "*"
-  }
+	"name": "broccoli-autoprefixer",
+	"version": "5.0.0",
+	"description": "Prefix CSS using Autoprefixer",
+	"license": "MIT",
+	"repository": "sindresorhus/broccoli-autoprefixer",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && broccoli build temp && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"broccoli-plugin",
+		"autoprefixer",
+		"postcss",
+		"css",
+		"prefix",
+		"prefixes",
+		"stylesheet",
+		"preprocess",
+		"postcss-runner"
+	],
+	"dependencies": {
+		"autoprefixer": "^8.0.0",
+		"broccoli-persistent-filter": "^1.1.6",
+		"postcss": "^6.0.1"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"broccoli": "^1.1.1",
+		"broccoli-cli": "^1.0.0",
+		"del": "^3.0.0",
+		"xo": "*"
+	}
 }
