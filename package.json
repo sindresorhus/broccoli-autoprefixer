@@ -9,9 +9,6 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "sindresorhus.com"
 	},
-	"engines": {
-		"node": ">=6"
-	},
 	"scripts": {
 		"test": "xo && broccoli build temp && ava"
 	},
