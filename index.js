@@ -10,7 +10,7 @@ module.exports = class extends Filter {
 		this.options = options;
 	}
 
-	get extension() {
+	get extensions() {
 		return ['css'];
 	}
 
