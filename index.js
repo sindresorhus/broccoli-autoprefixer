@@ -1,4 +1,5 @@
 'use strict';
+
 const Filter = require('broccoli-persistent-filter');
 const postcss = require('postcss');
 const autoprefixer = require('autoprefixer');
@@ -40,13 +41,13 @@ module.exports = class extends Filter {
 
 				return result.css;
 			})
-			.catch(err => {
-				if (err.name === 'CssSyntaxError') {
+			.catch(error => {
+				if (error.name === 'CssSyntaxError') {
 					// TODO: Find a way to hide the stack so to adhere to the PostCSS guidelines
-					err.message += err.showSourceCode();
+					error.message += error.showSourceCode();
 				}
 
-				throw err;
+				throw error;
 			});
 	}
 };
