@@ -30,7 +30,7 @@
     "postcss-runner"
   ],
   "dependencies": {
-    "autoprefixer": "^9.0.2",
+    "autoprefixer": "^9.7.6",
     "broccoli-persistent-filter": "^1.1.6",
     "postcss": "^7.0.2"
   },
