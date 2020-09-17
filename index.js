@@ -19,35 +19,35 @@ module.exports = class extends Filter {
 		return 'css';
 	}
 
-	processString(text, relativePath) {
-		const options = Object.assign({
+	async processString(text, relativePath) {
+		const options = {
 			from: relativePath,
-			to: relativePath
-		}, this.options);
+			to: relativePath,
+			...this.options
+		};
 
 		// Support explicit override of inline sourcemaps
 		if (options.sourcemap !== null || options.sourcemap !== undefined) {
 			options.map = options.sourcemap ? 'inline' : false;
 		}
 
-		return postcss(autoprefixer(options))
-			.process(text, options)
-			.then(result => {
-				const warnings = result.warnings();
+		let result;
+		try {
+			result = await postcss(autoprefixer(options)).process(text, options);
+		} catch (error) {
+			if (error.name === 'CssSyntaxError') {
+				// TODO: Find a way to hide the stack so to adhere to the PostCSS guidelines
+				error.message += error.showSourceCode();
+			}
+			throw error;
+		}
 
-				if (warnings.length > 0) {
-					console.error(warnings.join('\n'));
-				}
+		const warnings = result.warnings();
 
-				return result.css;
-			})
-			.catch(error => {
-				if (error.name === 'CssSyntaxError') {
-					// TODO: Find a way to hide the stack so to adhere to the PostCSS guidelines
-					error.message += error.showSourceCode();
-				}
+		if (warnings.length > 0) {
+			console.error(warnings.join('\n'));
+		}
 
-				throw error;
-			});
+		return result.css;
 	}
 };

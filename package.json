@@ -7,10 +7,10 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   },
   "scripts": {
     "test": "xo && broccoli build temp && ava"
@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "autoprefixer": "^9.8.4",
-    "broccoli-persistent-filter": "^1.1.6",
+    "broccoli-persistent-filter": "^3.0.0",
     "postcss": "^7.0.2"
   },
   "devDependencies": {
