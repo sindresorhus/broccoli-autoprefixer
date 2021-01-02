@@ -1,4 +1,4 @@
-# [broccoli](https://github.com/joliss/broccoli)-autoprefixer [![Build Status](https://travis-ci.org/sindresorhus/broccoli-autoprefixer.svg?branch=master)](https://travis-ci.org/sindresorhus/broccoli-autoprefixer)
+# [broccoli](https://github.com/joliss/broccoli)-autoprefixer
 
 > Prefix CSS using [Autoprefixer](https://github.com/postcss/autoprefixer)
 
