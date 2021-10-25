@@ -10,7 +10,7 @@
     "url": "https://sindresorhus.com"
   },
   "engines": {
-    "node": ">=10"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
     "test": "xo && broccoli build temp && ava"
@@ -30,15 +30,21 @@
     "postcss-runner"
   ],
   "dependencies": {
-    "autoprefixer": "^9.8.4",
+    "autoprefixer": "^10.3.7",
     "broccoli-persistent-filter": "^3.0.0",
-    "postcss": "^7.0.2"
+    "postcss": "^8.3.11"
   },
   "devDependencies": {
-    "ava": "1.0.1",
-    "broccoli": "^1.1.1",
+    "ava": "3.15.0",
+    "broccoli": "^3.5.2",
     "broccoli-cli": "^1.0.0",
-    "del": "^3.0.0",
-    "xo": "0.23.0"
+    "del": "^6.0.0",
+    "xo": "0.45.0"
+  },
+  "xo": {
+    "rules": {
+      "unicorn/prefer-module": 1,
+      "unicorn/prefer-node-protocol": 1
+    }
   }
 }

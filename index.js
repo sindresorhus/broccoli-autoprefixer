@@ -23,7 +23,7 @@ module.exports = class extends Filter {
 		const options = {
 			from: relativePath,
 			to: relativePath,
-			...this.options
+			...this.options,
 		};
 
 		// Support explicit override of inline sourcemaps
@@ -39,6 +39,7 @@ module.exports = class extends Filter {
 				// TODO: Find a way to hide the stack so to adhere to the PostCSS guidelines
 				error.message += error.showSourceCode();
 			}
+
 			throw error;
 		}
 
