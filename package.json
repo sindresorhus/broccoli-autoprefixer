@@ -43,8 +43,8 @@
   },
   "xo": {
     "rules": {
-      "unicorn/prefer-module": 1,
-      "unicorn/prefer-node-protocol": 1
+      "unicorn/prefer-module": "off",
+      "unicorn/prefer-node-protocol": "off"
     }
   }
 }
