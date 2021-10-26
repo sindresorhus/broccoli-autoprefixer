@@ -1,50 +1,51 @@
 {
-  "name": "broccoli-autoprefixer",
-  "version": "8.0.0",
-  "description": "Prefix CSS using Autoprefixer",
-  "license": "MIT",
-  "repository": "sindresorhus/broccoli-autoprefixer",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "https://sindresorhus.com"
-  },
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
-  "scripts": {
-    "test": "xo && broccoli build temp && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "broccoli-plugin",
-    "autoprefixer",
-    "postcss",
-    "css",
-    "prefix",
-    "prefixes",
-    "stylesheet",
-    "preprocess",
-    "postcss-runner"
-  ],
-  "dependencies": {
-    "autoprefixer": "^10.3.7",
-    "broccoli-persistent-filter": "^3.0.0",
-    "postcss": "^8.3.11"
-  },
-  "devDependencies": {
-    "ava": "3.15.0",
-    "broccoli": "^3.5.2",
-    "broccoli-cli": "^1.0.0",
-    "del": "^6.0.0",
-    "xo": "0.45.0"
-  },
-  "xo": {
-    "rules": {
-      "unicorn/prefer-module": "off",
-      "unicorn/prefer-node-protocol": "off"
-    }
-  }
+	"name": "broccoli-autoprefixer",
+	"version": "8.0.0",
+	"description": "Prefix CSS using Autoprefixer",
+	"license": "MIT",
+	"repository": "sindresorhus/broccoli-autoprefixer",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"engines": {
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+	},
+	"scripts": {
+		"test": "xo && broccoli build temp && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"broccoli-plugin",
+		"autoprefixer",
+		"postcss",
+		"css",
+		"prefix",
+		"prefixes",
+		"stylesheet",
+		"preprocess",
+		"postcss-runner"
+	],
+	"dependencies": {
+		"autoprefixer": "^10.3.7",
+		"broccoli-persistent-filter": "^3.1.2",
+		"postcss": "^8.3.11"
+	},
+	"devDependencies": {
+		"ava": "3.15.0",
+		"broccoli": "^3.5.2",
+		"broccoli-cli": "^1.0.0",
+		"del": "^6.0.0",
+		"xo": "0.45.0"
+	},
+	"xo": {
+		"rules": {
+			"unicorn/prefer-module": "off",
+			"unicorn/prefer-node-protocol": "off"
+		}
+	}
 }

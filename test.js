@@ -7,7 +7,7 @@ test.afterEach(() => {
 });
 
 test('prefix CSS', t => {
-	const f = fs.readFileSync('temp/fixture.css', 'utf8');
-	t.regex(f, /:-webkit-full-screen/);
-	t.regex(f, /sourceMappingURL=data:application/);
+	const fixture = fs.readFileSync('temp/fixture.css', 'utf8');
+	t.regex(fixture, /:-webkit-full-screen/);
+	t.regex(fixture, /sourceMappingURL=data:application/);
 });
