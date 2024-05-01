@@ -6,8 +6,8 @@
 
 ## Install
 
-```
-$ npm install --save-dev broccoli-autoprefixer
+```sh
+npm install --save-dev broccoli-autoprefixer
 ```
 
 ## Usage
